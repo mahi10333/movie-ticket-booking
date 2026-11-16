@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #101010;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background-color: #151515;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+.logo span {
+    color: #e8b94f;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links a:hover {
+    color: #e8b94f;
+}
+
+.nav-button,
+.primary-button {
+    background-color: #e8b94f;
+    color: #101010;
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+
+.hero {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.tagline,
+.section-heading p {
+    color: #e8b94f;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.hero h2 {
+    font-size: 55px;
+    margin: 20px 0;
+}
+
+.hero h2 span {
+    color: #e8b94f;
+}
+
+.hero-description {
+    color: #b5b5b5;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Movies Section */
+
+.movies {
+    padding: 60px 8%;
+}
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: 35px;
+    margin-top: 12px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #151515;
+    text-align: center;
+    padding: 35px 15px;
+    color: #aaa;
+    line-height: 2;
+}
+
+.movie-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.movie-card {
+    background-color: #1c1c1c;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.movie-card:hover {
+    transform: translateY(-8px);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 480px;
+    object-fit: contain;
+    background-color: #111;
+    display: block;
+}
+
+.movie-info {
+    padding: 18px;
+}
+
+.movie-info h3 {
+    margin-bottom: 8px;
+}
+
+.movie-info p {
+    margin-bottom: 15px;
+}
+
+.book-button {
+    display: inline-block;
+    background-color: #e8b94f;
+    color: #101010;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+footer h2 {
+    color: #e8b94f;
+}
+
+
+/* Booking Page */
+
+.booking-section {
+    max-width: 650px;
+    margin: 60px auto;
+    padding: 30px;
+}
+
+.booking-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.booking-heading p {
+    color: #e8b94f;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.booking-heading h2 {
+    font-size: 35px;
+    margin-top: 12px;
+}
+
+.booking-form {
+    background-color: #1c1c1c;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.booking-form label {
+    display: block;
+    margin: 18px 0 8px;
+    font-weight: bold;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 13px;
+    background-color: #292929;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.booking-form button {
+    width: 100%;
+    margin-top: 28px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+/* Booking Form Improvements */
+
+.booking-section {
+    min-height: 80vh;
+}
+
+.booking-form {
+    border: 1px solid #303030;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+.booking-form input,
+.booking-form select {
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+    border-color: #e8b94f;
+    box-shadow: 0 0 8px rgba(232, 185, 79, 0.2);
+}
+
+.booking-form button {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.booking-form button:hover {
+    background-color: #f5cc70;
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsive Booking Form */
+
+@media (max-width: 600px) {
+    .booking-section {
+        margin: 30px auto;
+        padding: 15px;
+    }
+
+    .booking-heading h2 {
+        font-size: 28px;
+    }
+
+    .booking-form {
+        padding: 20px;
+    }
+
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+}
+
+
+/* Movie Card Final Styling */
+
+.movie-card {
+    border: 1px solid #292929;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-8px);
+    border-color: #e8b94f;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 480px;
+    object-fit: contain;
+    background-color: #111;
+    display: block;
+}
+
+.movie-info h3 {
+    min-height: 25px;
+}
+
+.book-button {
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.book-button:hover {
+    background-color: #f5cc70;
+    transform: scale(1.04);
+}
+
+
+/* Navigation Improvements */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #292929;
+}
+
+.nav-links a {
+    transition: color 0.3s ease;
+}
+
+.nav-button {
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #f5cc70;
+}
+
+.footer-links {
+    margin: 15px 0;
+}
+
+.footer-links a {
+    color: #e8b94f;
+    text-decoration: none;
+    margin: 0 12px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .hero {
+        padding: 50px 6%;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .movies {
+        padding: 40px 6%;
+    }
+
+    .movie-container {
+        grid-template-columns: 1fr;
+    }
+
+    .movie-card img {
+        height: 420px;
+    }
+}
+
+
+/* Tablets */
+@media (max-width: 1000px) {
+    .movie-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+    .movie-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Bill Summary */
+
+.bill-summary {
+    background-color: #252525;
+    padding: 22px;
+    margin-top: 25px;
+    border-radius: 10px;
+    border: 1px solid #444;
+}
+
+.bill-summary h3 {
+    color: #e8b94f;
+    margin-bottom: 18px;
+}
+
+.bill-summary p {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    color: #ccc;
+}
+
+.bill-summary hr {
+    border: 1px solid #444;
+    margin: 18px 0;
+}
+
+#finalAmount {
+    color: #e8b94f;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* Booking Confirmation */
+
+.confirmation-box {
+    display: none;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 35px;
+    background-color: #1c1c1c;
+    border: 1px solid #444;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.success-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 20px;
+    background-color: #244c32;
+    color: #6bd68b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+}
+
+.confirmation-box h2 {
+    color: #e8b94f;
+    margin-bottom: 12px;
+}
+
+.success-message {
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+.booking-details {
+    background-color: #252525;
+    padding: 22px;
+    border-radius: 8px;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.booking-details h3 {
+    color: #e8b94f;
+    margin-bottom: 18px;
+}
+
+.booking-details p {
+    margin: 13px 0;
+    color: #ccc;
+}
+
+.booking-status {
+    color: #6bd68b !important;
+    font-weight: bold;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+}
+
+.confirmation-box button {
+    border: none;
+    cursor: pointer;
+}
